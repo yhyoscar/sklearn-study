@@ -17,7 +17,7 @@ Decision tree is a tree whose nodes are feature attributes, every branch of the 
 example:
 Let’s say we have a sample of 30 students with three variables Gender (Boy/ Girl), Class( IX/ X) and Height (5 to 6 ft). 15 out of these 30 play cricket in leisure time. Now, I want to create a model to predict who will play cricket during leisure period? In this problem, we need to segregate students who play cricket in their leisure time based on highly significant input variable among all three.
 
-![example](/img/dt1.png)
+![example](./img/dt1.png)
 
 This is where decision tree helps, it will segregate the students based on all values of three variable and identify the variable, which creates the best homogeneous sets of students (which are heterogeneous to each other). In the snapshot above, you can see that variable Gender is able to identify best homogeneous sets compared to the other two variables.
 
@@ -33,7 +33,7 @@ See the below figure
 6. **Branch / Sub-Tree:** A sub section of entire tree is called branch or sub-tree.
 7. **Parent and Child Node:** A node, which is divided into sub-nodes is called parent node of sub-nodes where as sub-nodes are the child of parent node.
 
-![terminology](/img/dt2.png)
+![terminology](./img/dt2.png)
 
 ## CART - Classification and Regression Trees
 Regression trees are used when dependent variable is continuous. Classification trees are used when dependent variable is categorical.
@@ -55,7 +55,7 @@ Y          |   Romance |  Yes
 
 Let say, we want to identify the success of the movie but we can use only on variable - There are the following two ways in which this can be done:
 
-![method1](/img/m1.jpg)
+![method1](./img/m1.jpg)
 
 You can clearly observe that Method 1 (Based on lead actor) splits the data best while the second method (Based on Genre) have produced mixed results. Decision Tree algorithms do similar things when it comes to select variables.
 
@@ -63,21 +63,21 @@ You can clearly observe that Method 1 (Based on lead actor) splits the data best
 
 Entropy here stands for the statistical entropy, differentiating from the one from thermodynamics which is a measure of variablility or chaos or randomness, and is defined as:
 
-![entropy](/img/9.png)
+![entropy](./img/9.png)
 
 Initial entropy in the system was:
 
-![eni](/img/8.png)
+![eni](./img/8.png)
 
 *Entropy for method 1*
 
 For left branch
 
-![enl](/img/7.png)
+![enl](./img/7.png)
 
 For right branch
 
-![enr](/img/4.png)
+![enr](./img/4.png)
 
 *Information Gain = Entropy of parent - weighted average of children entropy*
 which is, *0.68 - (4x0.56 + 3x0.63)/7 = 0.09*
@@ -92,23 +92,23 @@ Gini index measures the impurity of data splits.
 
 Formula:
 
-![gini](/img/6.png)
+![gini](./img/6.png)
 
 where n is the number of classes, and P is the probability that an observation in split belongs to the class. Gini Index assumes a binary split for each of the attribute, let say T1 & T2. The Gini index of the split is given by
 
-![split](/img/5.png)
+![split](./img/5.png)
 
 Which is nothing but a weighted sum of each of the impurities in split nodes. The reduction in impurity is given by:
 
-![reduct](/img/3.png)
+![reduct](./img/3.png)
 
 Coming back to the movie example, the original gini index of the dataset is:
 
-![g0](/img/2.png)
+![g0](./img/2.png)
 
 As per method 1, we have
 
-![g1](/img/1.png)
+![g1](./img/1.png)
 
 The reduciton of the impurity is thus: *0.49-0.43=0.06*, which is higher than that of method 2, which is *0.49-0.48=0.01*
 
@@ -167,7 +167,7 @@ We will use a dictionary to represent a node in the decision tree as we can stor
 
 Each group of data is its own small dataset of just those rows assigned to the left or right group by the splitting process. You can imagine how we might split each group again, recursively as we build out our decision tree.
 
-![cart](/img/CART-Contrived-Dataset.png)
+![cart](./img/CART-Contrived-Dataset.png)
 
 #### Build a tree
 
@@ -281,23 +281,23 @@ See the code in [GitHub/xuewyang/randomforest](https://github.com/xuewyang/rando
 
 There is a hard problem for a single tree: 
 
-![hard](/img/rf1.png)
+![hard](./img/rf1.png)
 
 A single tree will have the following pattern, which is not a good way to separate the dataset.
 
-![singletree](/img/rf2.png)
+![singletree](./img/rf2.png)
 
 If we had 25 trees and average them, then we have the following pattern.
 
-![25averagedtree](/img/rf3.png){:height="24px" width="24px"}
+![25averagedtree](./img/rf3.png){:height="24px" width="24px"}
 
 If the 25 trees vote for the final prediction, then we have the following, which is more accurate.
 
-![25votetree](/img/rf4.png)
+![25votetree](./img/rf4.png)
 
 **Bagging** is bootstrap aggregating. Fit classification or regression models to bootstrap samples from the data and combine by voting (classification) or averaging (regression). See the illustration below:
 
-![bagging](/img/rf5.png)
+![bagging](./img/rf5.png)
 
 Bagging has the following characteristics:
 
