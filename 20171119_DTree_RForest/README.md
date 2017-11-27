@@ -7,7 +7,7 @@ Before talking about Random Forest, let's discuss DT first.
 
 ## An easy classification question.
 Is a watermelon with clear texture, wrinkled root a good melon, accoring to the below figure?
-![melon](/img/dt-0.png)
+![melon](./img/dt-0.png)
 
 Then how to build a tree given training data? Why do we choose texture as root node, but not root or color? What is the criterion for choosing a feature attribute?
 
