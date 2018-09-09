@@ -58,6 +58,7 @@ def viterbi(A, B, y, pxinit=None):
     
     return x
 
+# simulation with HMM
 def HMM_simulation(A, B, nt=100, pxinit=None, xstr=None, ystr=None):
     nx = A.shape[0]
     ny = B.shape[1]
